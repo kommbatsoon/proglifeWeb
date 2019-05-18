@@ -1,0 +1,1 @@
+export const GLOBAL_API_URL = 'https://cors-anywhere.herokuapp.com/http://92.53.100.132:5672/';

@@ -1,0 +1,40 @@
+@import "./variables";
+
+@mixin flexWrapper(){
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+@mixin transparentScrollBar(){
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: inherit;
+    border: none;
+  }
+}
+@mixin scrollBar(){
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: $scroll-color;
+    height: 100px;
+  }
+}
+
+@mixin verticalScrollBar(){
+  &::-webkit-scrollbar {
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: $scroll-color;
+    width: 100px;
+  }
+}
+

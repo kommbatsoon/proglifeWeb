@@ -1,0 +1,45 @@
+@import '../../containers/App/styles/mixins';
+
+:local {
+  .wrapper {
+    background-color: #3b55a0;
+    width: 100%;
+    height: $header-height;
+    min-height: $header-height;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    .navigationBar {
+      display: flex;
+      list-style-type: none;
+      height: 100%;
+      padding: 0 30px;
+
+      .item {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 20px;
+        cursor: pointer;
+
+        font: normal normal normal 16px/normal Roboto, sans-serif;
+        text-transform: uppercase;
+        color: white;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.18);
+        }
+
+        &_active {
+          background-color: rgba(255, 255, 255, 0.18);
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
