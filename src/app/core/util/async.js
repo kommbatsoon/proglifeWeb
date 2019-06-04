@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {navigateTo, ERROR_URL} from '../util/helpers/urlConfig';
+import {navigateTo, ERROR_URL} from '../../util/config/api.config';
 import { clearAuthData, setErrorStatus } from '../actions/application';
 
 class AuthenticationError extends Error {

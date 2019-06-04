@@ -4,22 +4,24 @@ import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom
 import './styles/app.scss';
 
 import Header from '../Header';
-import Home from '../../view/Home';
-import Test from '../../view/Test';
+import Welcome from '../../pages/Welcome';
+import Start from '../../pages/Start';
+import Test from '../../pages/Test';
+import Authorization from '../../pages/Authorization';
 
-import ROUTE_CONFIG from '../../core/util/helpers/routeConfig';
+import ROUTE_CONFIG from '../../util/config/router.config';
 
 
 const PrivateRoute = ({component: Component, token, ...rest}) => (
     <Route {...rest} render={(props) => (
-        (!token) ?
+        (token) ?
             (<div className='appWrapper'>
                 <Header/>
                 <div className='component'>
                     <Component {...props} />
                 </div>
             </div>)
-            : <Redirect to={{pathname: ROUTE_CONFIG.home.path, state: {from: props.location}}}/>)
+            : <Redirect to={{pathname: ROUTE_CONFIG.welcome.path, state: {from: props.location}}}/>)
     } />
 
 );
@@ -30,17 +32,17 @@ export class App extends Component {
     }
 
     render() {
-        const {token} = this.props;
-        const {test, home} = ROUTE_CONFIG;
+        const {token = 'testToken'} = this.props;
+        const {test, welcome, start, authorization} = ROUTE_CONFIG;
 
         return (
             <Router>
                 <Switch>
-                    {/*<PrivateRoute exact path={'/'} component={MainPage} token={token}/>*/}
-                    {/*<PrivateRoute exact path={INDEX_TAB.path} component={MainPage} token={token}/>*/}
-                    {/*<Route path={LOGIN_TAB.path} component={MainPage}/>*/}
-                    <PrivateRoute exact path={home.path} component={Home} token={token}/>
                     <PrivateRoute exact path={test.path} component={Test} token={token}/>
+                    <PrivateRoute exact path={start.path} component={Start} token={token}/>
+                    <Route path={authorization.path} component={Authorization}/>
+                    <Route path={welcome.path} component={Welcome}/>
+                    <Route path={''} component={Welcome}/>
                 </Switch>
             </Router>
         );

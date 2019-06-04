@@ -2,13 +2,15 @@
 
 :local {
   .wrapper {
-    background-color: #3b55a0;
+    background-color: #2f2f2f;
     width: 100%;
     height: $header-height;
     min-height: $header-height;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
 
     .navigationBar {
       display: flex;

@@ -46,7 +46,7 @@ app.get('*', function root(req, res, next) {
 });
 
 const server = http.createServer(app);
-server.listen(process.env.PORT || 3000, function onListen() {
+server.listen(process.env.PORT || 3003, function onListen() {
     const address = server.address();
     console.log('Listening on: %j', address);
     console.log('URL: http://localhost:%d', address.port);

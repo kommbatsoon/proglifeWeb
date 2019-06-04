@@ -1,0 +1,27 @@
+:local {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30%;
+    opacity: .85;
+
+    .image {
+      width: 200px;
+      height: 190px;
+
+      background: url('../../../../assets/noData.png') no-repeat center;
+      background-size: 100% 100%;
+    }
+
+    .text {
+      font-size: 30px;
+    }
+  }
+}
+
+
+
+
+

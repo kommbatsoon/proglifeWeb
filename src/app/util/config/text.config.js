@@ -1,0 +1,1 @@
+export const NO_DATA_DEFAULT_TEXT = 'No data to display';

@@ -1,5 +1,8 @@
 {
-  "extends": "eslint:recommended",
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
   "ecmaFeatures": {
     "modules": true
   },
@@ -23,6 +26,8 @@
     "semi": [2, "always"],
     "no-console": 0,
     "no-debugger": 2,
+    "no-shadowed-variable": true,
+    "no-trailing-whitespace": true,
     "new-cap": 0,
     "strict": 0,
     "no-underscore-dangle": 0,
@@ -38,6 +43,10 @@
     "comma-dangle": [2, "never"],
     "prop-types":[0,"never"],
     "jsx-quotes": [2, "prefer-single"],
+    "comment-format": [
+      true,
+      "check-space"
+    ],
     "no-multi-spaces": [1, {
       "exceptions": {
           "VariableDeclarator": true,

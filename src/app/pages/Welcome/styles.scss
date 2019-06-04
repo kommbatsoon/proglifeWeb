@@ -1,0 +1,26 @@
+:local {
+  .wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    background: #f2f3f4;
+
+    .welcomeText {
+      font-size: 50px;
+    }
+    .startButton {
+      margin-top: 10px;
+      width: 200px;
+      height: 40px;
+    }
+
+    .copyrightText {
+      font-size: 15px;
+      margin-top: 25px;
+    }
+  }
+}
